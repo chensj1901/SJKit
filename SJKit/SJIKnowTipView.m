@@ -7,7 +7,7 @@
 //
 
 #import "SJIKnowTipView.h"
-#import "SJFrame.h"
+#import "SJKit.h"
 
 @implementation SJIKnowTipView
 {
