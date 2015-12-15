@@ -8,6 +8,7 @@
 
 #import "UIViewController+SJViewController.h"
 #import "UIColor+SJColor.h"
+#import "config.h"
 
 @implementation UIViewController (SJViewController)
 -(void)animationWithAnimationType:(NSString*)animationType subAnimationType:(NSString*)subAnimationType duration:(CGFloat)duration{
