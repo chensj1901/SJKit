@@ -7,7 +7,7 @@
 //
 
 #import "SJFunction.h"
-#import "SJFrame.h"
+#import "SJKit.h"
 
 @implementation SJFunction
 
