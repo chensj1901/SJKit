@@ -7,7 +7,7 @@
 //
 
 #import "SJImageLabel.h"
-#import "SJFrame.h"
+#import "SJKit.h"
 
 @implementation SJImageLabel
 -(id)initWithFrame:(CGRect)frame{
