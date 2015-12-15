@@ -14,5 +14,4 @@ Pod::Spec.new do |s|
   s.source_files  = "SJKit/*.{h,m}"
   s.public_header_files = "SJKit/*.h"
   s.requires_arc = false
-  s.dependency 'RTLabel', '~> 1.0.1'
 end
