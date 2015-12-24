@@ -35,4 +35,7 @@ typedef  NS_ENUM(NSInteger, SJButtonImagePositionType){
 
 
 -(void)quicklyTopImageBottomTitleType:(SJButtonImagePositionType)buttonType padding:(NSInteger)padding topY:(CGFloat)topY;
+
+-(void)quicklySetTitle:(NSString *)title;
+
 @end

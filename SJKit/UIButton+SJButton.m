@@ -158,4 +158,8 @@
                                               0.0,
                                               0.0)];
 }
+
+-(void)quicklySetTitle:(NSString *)title{
+    [self setTitle:title forState:UIControlStateNormal];
+}
 @end
