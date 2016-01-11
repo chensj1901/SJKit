@@ -628,6 +628,23 @@
     return newImage;
 }
 
+- (UIImage *)thumbnailImageWithSize:(CGSize)newSize{
+    CGRect rect;
+    UIGraphicsBeginImageContext(CGSizeMake((int)newSize.width, (int)newSize.height));
+    if (newSize.width*self.size.height>newSize.height*self.size.width)
+    {
+        rect=CGRectMake(0,(newSize.height-self.size.height*newSize.width/self.size.width)/2,newSize.width,self.size.height*newSize.width/self.size.width);
+    }
+    else
+    {
+        rect=CGRectMake((newSize.width-self.size.width*newSize.height/self.size.height)/2,0,self.size.width*newSize.height/self.size.height,newSize.height);
+    }
+    [self drawInRect:rect];
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+    
+}
 /*
 -(long)fileLenght{
     int  perMBBytes = 1024*1024;

@@ -8,6 +8,7 @@
 
 #import "UIView+SJView.h"
 #import "objc/runtime.h"
+#import "UIColor+SJColor.h"
 
 typedef void(^GESTURE_Tapped)(UIView *tapView);
 static NSString *GESTURE_BLOCK = @"GESTURE_BLOCK";

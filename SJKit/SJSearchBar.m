@@ -7,6 +7,8 @@
 //
 
 #import "SJSearchBar.h"
+#import "UIImage+SJImage.h"
+#import "UIColor+SJColor.h"
 
 @implementation SJSearchBar
 @synthesize searchIcon=_searchIcon;

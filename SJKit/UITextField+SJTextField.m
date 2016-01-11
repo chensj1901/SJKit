@@ -7,6 +7,7 @@
 //
 
 #import "UITextField+SJTextField.h"
+#import "UIColor+SJColor.h"
 
 @implementation UITextField (SJTextField)
 -(void)quicklySetBoldFontPoint:(CGFloat)point textColorHex:(NSString *)colorHex textAlignment:(NSTextAlignment)textAlignment{

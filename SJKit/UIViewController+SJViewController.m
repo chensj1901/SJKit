@@ -8,7 +8,7 @@
 
 #import "UIViewController+SJViewController.h"
 #import "UIColor+SJColor.h"
-#import "config.h"
+#import "SJKit+Help.h"
 
 @implementation UIViewController (SJViewController)
 -(void)animationWithAnimationType:(NSString*)animationType subAnimationType:(NSString*)subAnimationType duration:(CGFloat)duration{
@@ -108,6 +108,36 @@
         
         UIBarButtonItem *rightItem=[[UIBarButtonItem alloc]initWithCustomView:rightBtn];
         self.navigationItem.rightBarButtonItem = rightItem;
+        return rightBtn;
+    }
+    return nil;
+}
+
+-(UIButton *)quicklyCreateLeftItemWithTitle:(NSString*)title titleColorHex:(NSString*)titleColorHex titleHighlightedColorHex:(NSString*)titleHighlightedColorHex selector:(SEL)selector
+{
+    if ([self isKindOfClass:[UIViewController class]]) {
+        UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];//[self navigationButton];
+        [rightBtn addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+        [rightBtn setTitle:title forState:UIControlStateNormal];
+        [rightBtn setBackgroundImage:nil forState:UIControlStateNormal];
+        [rightBtn setBackgroundImage:nil forState:UIControlStateHighlighted];
+        if (titleColorHex&&titleColorHex.length==6) {
+            [rightBtn setTitleColor:[UIColor colorWithHex:titleColorHex] forState:UIControlStateNormal];
+        }
+        if (titleHighlightedColorHex&&titleHighlightedColorHex.length==6) {
+            [rightBtn setTitleColor:[UIColor colorWithHex:titleHighlightedColorHex] forState:UIControlStateHighlighted];
+            
+        }
+        [rightBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
+        if (title) {
+            //            button.frame=CGRectMake([UIScreen mainScreen].bounds.size.width-64, 7, 48, 28);
+            CGRect frame = rightBtn.frame;
+            frame.size.width = [title sizeWithFont:rightBtn.titleLabel.font].width;
+            rightBtn.frame = frame;
+            [rightBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, 0, 0, IS_IOS7()?-12:0)];
+        }
+        UIBarButtonItem *rightItem=[[UIBarButtonItem alloc]initWithCustomView:rightBtn];
+        self.navigationItem.leftBarButtonItem = rightItem;
         return rightBtn;
     }
     return nil;

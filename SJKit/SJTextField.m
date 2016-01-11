@@ -7,6 +7,8 @@
 //
 
 #import "SJTextField.h"
+#import "UIColor+SJColor.h"
+#import "UITextField+SJTextField.h"
 
 @implementation SJTextField
 

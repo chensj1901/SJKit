@@ -7,6 +7,7 @@
 //
 
 #import "NSDictionary+SJDictionary.h"
+#import "NSString+SJString.h"
 
 @implementation NSDictionary (SJDictionary)
 -(NSString*)stringValue{
@@ -28,4 +29,21 @@
     
     return nil;
 }
+
+-(NSDictionary *)dictionaryWithSign{
+    NSMutableDictionary *parameters=[self mutableCopy];
+    NSMutableArray *t=[[self allKeys]mutableCopy];
+    [t sortUsingComparator:^NSComparisonResult(NSString * obj1, NSString * obj2) {
+        return [obj1 compare:obj2 options:NSCaseInsensitiveSearch];
+    }];
+    
+    NSMutableString *sign=[NSMutableString new];
+    
+    for (NSString *s in t) {
+        [sign appendFormat:@"%@ponimei",[self safeObjectForKey:s]];
+    }
+    [parameters setObject:[sign md5Encode] forKey:@"sign"];
+    return parameters;
+}
+
 @end

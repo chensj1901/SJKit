@@ -39,6 +39,7 @@
 - (CGRect) getHasInfoRect;
 - (UIImage*)imageWithGaussianBlurByRadius:(CGFloat)radius;
 -(UIImage*)imageWithScaledToSize:(CGSize)newSize;
+- (UIImage *)thumbnailImageWithSize:(CGSize)newSize;
 - (UIImage*)makeRoundCornersWithRadius:(const CGFloat)radius;
 - (UIImage*)makeRoundCornersWithRadius:(const CGFloat)radius widthBorderColor:(UIColor*)borderColor borderWidth:(CGFloat)borderWidth;
 //@property(nonatomic,readonly)long fileLenght;

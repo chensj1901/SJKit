@@ -13,5 +13,4 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/chensj1901/SJKit.git", :tag => "1.0.0" }
   s.source_files  = "SJKit/*.{h,m}"
   s.public_header_files = "SJKit/*.h"
-  s.requires_arc = false
 end

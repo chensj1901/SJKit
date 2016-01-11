@@ -18,4 +18,6 @@
 
 
 -(UIButton*)quicklyCreateRightButtonWithImageName:(NSString *)imageName highlightedImageName:(NSString *)highlightedImageName selector:(SEL)selector;
+
+-(UIButton *)quicklyCreateLeftItemWithTitle:(NSString*)title titleColorHex:(NSString*)titleColorHex titleHighlightedColorHex:(NSString*)titleHighlightedColorHex selector:(SEL)selector;
 @end

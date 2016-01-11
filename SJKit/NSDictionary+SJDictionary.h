@@ -11,4 +11,5 @@
 @interface NSDictionary (SJDictionary)
 -(NSString*)stringValue;
 -(id)safeObjectForKey:(id)key;
+-(NSDictionary *)dictionaryWithSign;
 @end

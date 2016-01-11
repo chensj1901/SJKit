@@ -25,6 +25,10 @@
 #import "UITableView+SJTableView.h"
 #import "UIImageView+SJImageView.h"
 #import "UIImage+SJImage.h"
-#import "config.h"
+#import "SJDottedView.h"
+#import "SJKit+Help.h"
+
+
+
 
 #endif
